@@ -1,0 +1,25 @@
+{
+    "user": {
+        "email": "string",
+        "password": "string"
+    },
+    "music": {
+        "name": "string",
+        "duration": "number",
+        "storage": "string",
+        "album": "album"
+    },
+    "album": {
+        "name": "string",
+        "artist": "artist",
+        "featuring": "artist[]"
+    },
+    "artist": {
+        "name": "string"
+    },
+    "listen": {
+        "when": "datetime",
+        "music": "music",
+        "user": "user"
+    }
+}
