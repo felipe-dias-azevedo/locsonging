@@ -4,5 +4,16 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Adapter" />
+    <Folder Include="Controller" />
+    <Folder Include="DTO" />
+    <Folder Include="Helper" />
+    <Folder Include="Infrastructure" />
+    <Folder Include="Service\Application" />
+    <Folder Include="Service\Domain" />
+    <Folder Include="Service\Infrastructure" />
+  </ItemGroup>
+
 
 </Project>

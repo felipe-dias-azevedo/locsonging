@@ -1,25 +1,38 @@
 {
     "user": {
-        "email": "string",
-        "password": "string"
-    },
-    "music": {
         "name": "string",
+        "email": "string",
+        "password": "string",
+        "birthDate": "date",
+        "favorites": "song[]",
+        "spotifyToken": "string"
+    },
+    "song": {
+        "title": "string",
         "duration": "number",
         "storage": "string",
         "album": "album"
     },
     "album": {
-        "name": "string",
+        "title": "string",
         "artist": "artist",
-        "featuring": "artist[]"
+        "featuring": "artist[]",
+        "image": "string"
     },
     "artist": {
         "name": "string"
     },
+    "library": {
+        "name": "string",
+        "description": "string",
+        "createdAt": "datetime",
+        "songs": "song[]",
+        "user": "user"
+    },
     "listen": {
         "when": "datetime",
-        "music": "music",
+        "muchListened": "double",
+        "song": "song",
         "user": "user"
     }
 }
