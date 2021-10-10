@@ -20,7 +20,8 @@
         "image": "string"
     },
     "artist": {
-        "name": "string"
+        "name": "string",
+        "image": "string"
     },
     "library": {
         "name": "string",

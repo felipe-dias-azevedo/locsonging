@@ -1,1 +1,74 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+  --white: #f0f0f0;
+  --grey: #b2b2b2;
+  --black: #232323;
+  --blue-mid: #A1D0FF;
+  --blue-light: #54AAFF;
+  --blue-dark: #81A6CC;
+  --blue-dark-darker: #2A5580;
+  --blue-dark-mid: #506880;
+  --black-light: #424242;
+  --grey-light: #e1e1e1;
+  --black-dark: #141414;
+  --blue-dark-gradient: #204161;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.1s;
+}
+
+body, input, button, textarea {
+  font-size: 16px;
+  font-family: 'Rubik', sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(var(--black-dark), var(--blue-dark-gradient));
+  color: var(--white);
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 1.7rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.3rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+input {
+
+}
+
+button {
+
+}
+
+a {
+  text-decoration: none;
+  color: var(--white);
+  cursor: pointer;
+}

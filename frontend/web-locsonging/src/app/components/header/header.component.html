@@ -1,1 +1,27 @@
-<p>header works!</p>
+<header>
+  <div class="header-info-holder">
+    <section>
+      <a [routerLink]="">
+        <img src="assets/images/arrow-left.svg" alt="back page icon">
+      </a>
+      <h1>Home</h1>
+    </section>
+    <nav>
+      <a [routerLink]="">
+        <img src="assets/images/search.svg" alt="search icon">
+      </a>
+      <a [routerLink]="">
+        <img src="assets/images/equalizer.svg" alt="settings icon">
+      </a>
+      <a [routerLink]="">
+        <img src="assets/images/plus.svg" alt="more icon">
+      </a>
+    </nav>
+  </div>
+  <nav>
+    <a [routerLink]="" class="selected">Home</a>
+    <a [routerLink]="">Libraries</a>
+    <a [routerLink]="">Spotify</a>
+    <a [routerLink]="">Favorites</a>
+  </nav>
+</header>

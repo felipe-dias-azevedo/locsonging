@@ -5,5 +5,7 @@ namespace Felipe.Backend.Locsonging.Domain
         public string Id { get; set; }
         
         public string Name { get; set; }
+
+        public string Image { get; set; }
     }
 }
