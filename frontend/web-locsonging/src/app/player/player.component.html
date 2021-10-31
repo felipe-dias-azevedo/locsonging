@@ -1,33 +1,47 @@
 <router-outlet></router-outlet>
 <footer>
+<!-- Actual Song Playing -->
   <section>
-    <figure>
-      <img src="assets/InRainbows.jpeg" alt="">
+    <figure [routerLink]="['']">
+      <img src="assets/InRainbows.jpeg" alt="Music Album">
       <h3>Jigsaw Falling into Place</h3>
       <h5>Radiohead</h5>
     </figure>
     <button>
-      <img src="assets/images/star.svg" alt="">
+      <img src="assets/images/star.svg" alt="Star Music Icon">
     </button>
   </section>
+<!-- Slider -->
   <section>
-    Slider
+    <div class="slider-holder">
+      <div class="progress-slider">
+        <div class="fill-progress-slider"></div>
+      </div>
+      <input class="slider" type="range" min="0" max="248" value="124">
+    </div>
+    <div class="details-slider">
+      <p>2:04</p>
+      <p>4:08</p>
+    </div>
   </section>
+<!-- Media Buttons -->
   <section>
     <button>
-      <img src="assets/images/elipsis-h.svg" alt="">
+      <img src="assets/images/elipsis-h.svg" alt="Options Icon">
     </button>
+    <div class="main-buttons">
+      <button>
+        <img src="assets/images/backward.svg" alt="Backward Icon">
+      </button>
+      <button>
+        <img class="circle" src="assets/images/play.svg" alt="Play/Pause Icon">
+      </button>
+      <button>
+        <img src="assets/images/forward.svg" alt="Forward Icon">
+      </button>
+    </div>
     <button>
-      <img src="assets/images/backward.svg" alt="">
-    </button>
-    <button>
-      <img class="circle" src="assets/images/play.svg" alt="">
-    </button>
-    <button>
-      <img src="assets/images/forward.svg" alt="">
-    </button>
-    <button>
-      <img src="assets/images/sync.svg" alt="">
+      <img src="assets/images/sync.svg" alt="Repeat Icon">
     </button>
   </section>
 </footer>
