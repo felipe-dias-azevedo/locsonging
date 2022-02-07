@@ -6,16 +6,16 @@
 
   <ItemGroup>
     <Folder Include="Adapter" />
-    <Folder Include="DTO" />
+    <Folder Include="DTO\Response\" />
     <Folder Include="Helper" />
-    <Folder Include="Infrastructure" />
+    <Folder Include="Infrastructure\DAL\" />
+    <Folder Include="Infrastructure\Repository\" />
     <Folder Include="Service\Application" />
-    <Folder Include="Service\Domain" />
     <Folder Include="Service\Infrastructure" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="MongoDB.Driver.Core" Version="2.14.1" />
+    
   </ItemGroup>
 
 

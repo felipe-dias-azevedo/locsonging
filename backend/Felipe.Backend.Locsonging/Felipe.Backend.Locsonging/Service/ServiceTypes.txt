@@ -1,0 +1,20 @@
+﻿Services comes in 3 flavours:
+
+* Domain Services
+* Application Services
+* Infrastructure Services
+
+Domain Services:
+Encapsulates business logic that doesn't naturally fit within a domain object, and are NOT typical CRUD operations – those would belong to a Repository.
+
+Application Services:
+Used by external consumers to talk to your system (think Web Services). If consumers need access to CRUD operations, they would be exposed here.
+
+Infrastructure Services:
+Used to abstract technical concerns (e.g. MSMQ, email provider, etc).
+
+
+
+Keeping Domain Services along with your Domain Objects is sensible – they are all focused on domain logic. And yes, you can inject Repositories into your Services.
+
+Application Services will typically use both Domain Services and Repositories to deal with external requests.

@@ -7,8 +7,8 @@ namespace Felipe.Backend.Locsonging.Controller
     public class UserController : ControllerBase
     {
 
-        [HttpGet]
-        public IActionResult Get()
+        [HttpGet("{id}")]
+        public IActionResult Get([FromRoute] string id)
         {
             return Ok();
         }
