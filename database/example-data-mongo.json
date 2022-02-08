@@ -1,0 +1,110 @@
+{
+    "library": {
+        "name": "string",
+        "description": "string",
+        "createdAt": "datetime",
+        "songs": [
+            {
+                "title": "string",
+                "duration": "number",
+                "storage": "string",
+                "album": {
+                    "title": "string",
+                    "artist": {
+                        "name": "string",
+                        "image": "string"
+                    },
+                    "featuring": [
+                        {
+                            "name": "string",
+                            "image": "string"
+                        }
+                    ],
+                    "image": "string"
+                }
+            }
+        ],
+        "user": {
+            "name": "string",
+            "email": "string",
+            "password": "string",
+            "birthDate": "date",
+            "favorites": [
+                {
+                    "title": "string",
+                    "duration": "number",
+                    "storage": "string",
+                    "album": {
+                        "title": "string",
+                        "artist": {
+                            "name": "string",
+                            "image": "string"
+                        },
+                        "featuring": [
+                            {
+                                "name": "string",
+                                "image": "string"
+                            }
+                        ],
+                        "image": "string"
+                    }
+                }
+            ],
+            "spotifyToken": "string"
+        }
+    }
+}
+
+{
+    "listen": {
+        "when": "datetime",
+        "muchListened": "double",
+        "song": {
+            "title": "string",
+            "duration": "number",
+            "storage": "string",
+            "album": {
+                "title": "string",
+                "artist": {
+                    "name": "string",
+                    "image": "string"
+                },
+                "featuring": [
+                    {
+                        "name": "string",
+                        "image": "string"
+                    }
+                ],
+                "image": "string"
+            }
+        },
+        "user": {
+            "name": "string",
+            "email": "string",
+            "password": "string",
+            "birthDate": "date",
+            "favorites": [
+                {
+                    "title": "string",
+                    "duration": "number",
+                    "storage": "string",
+                    "album": {
+                        "title": "string",
+                        "artist": {
+                            "name": "string",
+                            "image": "string"
+                        },
+                        "featuring": [
+                            {
+                                "name": "string",
+                                "image": "string"
+                            }
+                        ],
+                        "image": "string"
+                    }
+                }
+            ],
+            "spotifyToken": "string"
+        }
+    }
+}

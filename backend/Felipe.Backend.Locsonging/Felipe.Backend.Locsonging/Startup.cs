@@ -10,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Felipe.Backend.Locsonging.Infrastructure;
 
 namespace Felipe.Backend.Locsonging
 {
@@ -26,6 +27,15 @@ namespace Felipe.Backend.Locsonging
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.Configure<MongoSettings>(options =>
+            {
+                options.ConnectionString = Configuration.GetSection("ConnectionStrings:MongoDb").Value;
+                options.Database = Configuration.GetSection("ConnectionStrings:MongoDb").Value.Split('/')
+                    .Last();
+            });
+            
+            services.AddScoped<IMongoContext, MongoDbContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
