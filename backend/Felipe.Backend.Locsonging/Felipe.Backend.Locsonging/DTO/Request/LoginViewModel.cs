@@ -1,13 +1,13 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 
 namespace Felipe.Backend.Locsonging.DTO.Request
 {
     public class LoginViewModel
     {
-        [JsonProperty("email")]
+        [JsonPropertyName("email")]
         public string Email { get; set; }
 
-        [JsonProperty("password")]
+        [JsonPropertyName("password")]
         public string Password { get; set; }
     }
 }

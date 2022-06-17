@@ -6,9 +6,6 @@ namespace Felipe.Backend.Locsonging.Infrastructure
 {
     public class MongoDbContext : IMongoContext
     {
-
-        private const string UserLocsonging = "Locsonging_User";
-        
         private readonly IMongoDatabase _ctx;
         
         public MongoDbContext(IOptions<MongoSettings> settings)
@@ -16,9 +13,6 @@ namespace Felipe.Backend.Locsonging.Infrastructure
             var client = new MongoClient(settings.Value.ConnectionString);
             _ctx = client.GetDatabase(settings.Value.Database);
         }
-        
-        public IMongoCollection<User> UserCollection =>
-            _ctx.GetCollection<User>(UserLocsonging);
 
         public IMongoCollection<T> GetCollection<T>(string name)
         {

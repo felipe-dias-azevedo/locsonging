@@ -11,6 +11,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Felipe.Backend.Locsonging.Infrastructure;
+using Felipe.Backend.Locsonging.Infrastructure.Repository;
+using Felipe.Backend.Locsonging.Infrastructure.Repository.Interface;
+using Felipe.Backend.Locsonging.Service.Domain;
+using Felipe.Backend.Locsonging.Service.Domain.Interface;
 
 namespace Felipe.Backend.Locsonging
 {
@@ -30,12 +34,15 @@ namespace Felipe.Backend.Locsonging
 
             services.Configure<MongoSettings>(options =>
             {
-                options.ConnectionString = Configuration.GetSection("ConnectionStrings:MongoDb").Value;
-                options.Database = Configuration.GetSection("ConnectionStrings:MongoDb").Value.Split('/')
-                    .Last();
+                options.ConnectionString = Configuration.GetSection("MongoDatabaseSettings:ConnectionString").Value;
+                options.Database = Configuration.GetSection("MongoDatabaseSettings:DatabaseName").Value;
             });
             
             services.AddScoped<IMongoContext, MongoDbContext>();
+
+            services.AddTransient<ISongService, SongService>();
+            services.AddTransient<ISongRepository, SongRepository>();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

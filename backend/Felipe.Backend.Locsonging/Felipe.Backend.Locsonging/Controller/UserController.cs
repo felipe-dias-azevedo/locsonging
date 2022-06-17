@@ -27,12 +27,7 @@ namespace Felipe.Backend.Locsonging.Controller
         {
             var logged = _authService.LoginUser(loginViewModel);
 
-            if (!logged.HasValue)
-            {
-                return NotFound();
-            }
-
-            if (!logged.Value)
+            if (!logged)
             {
                 return Unauthorized();
             }

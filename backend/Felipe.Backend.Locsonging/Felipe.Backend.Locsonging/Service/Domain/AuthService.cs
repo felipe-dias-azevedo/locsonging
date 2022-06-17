@@ -6,12 +6,12 @@ namespace Felipe.Backend.Locsonging.Service.Domain
     public class AuthService : IAuthService
     {
 
-        public bool? LoginUser(LoginViewModel loginView)
+        public bool LoginUser(LoginViewModel loginView)
         {
             throw new System.NotImplementedException();
         }
         
-        public bool? LoginSpotify(LoginViewModel loginView)
+        public bool LoginSpotify(LoginViewModel loginView)
         {
             throw new System.NotImplementedException();
         }
