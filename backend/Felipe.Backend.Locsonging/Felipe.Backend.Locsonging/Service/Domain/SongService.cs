@@ -15,9 +15,6 @@ namespace Felipe.Backend.Locsonging.Service.Domain
             _songRepository = songRepository;
         }
 
-        public async Task<IEnumerable<Song>> Get()
-        {
-            return await _songRepository.FindAll();
-        }
+        public async Task<IEnumerable<Song>> Get() => await _songRepository.FindAll();
     }
 }

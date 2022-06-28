@@ -1,8 +1,10 @@
 using System;
 using System.Collections.Generic;
+using Felipe.Backend.Locsonging.Infrastructure;
 
 namespace Felipe.Backend.Locsonging.Domain
 {
+    [MongoCollection("users")]
     public class User
     {
         public string Id { get; set; }

@@ -1,10 +1,11 @@
+using Felipe.Backend.Locsonging.Infrastructure;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
-using MongoDB.Bson.Serialization.IdGenerators;
 
 namespace Felipe.Backend.Locsonging.Domain
 {
     [BsonIgnoreExtraElements]
+    [MongoCollection("songs")]
     public class Song
     {
         public ObjectId Id { get; set; }

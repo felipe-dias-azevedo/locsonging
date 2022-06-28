@@ -12,12 +12,12 @@ namespace Felipe.Backend.Locsonging.Infrastructure.Repository
 
         public SongRepository(IMongoContext ctx)
         {
-            _songs = ctx.GetCollection<Song>("songs");
+            _songs = ctx.GetCollection<Song>();
         }
 
         public async Task<IEnumerable<Song>> FindAll()
         {
-            return await _songs.Find(s => s.Duration > 0).ToListAsync();
+            return await _songs.Find(_ => true).ToListAsync();
         }
     }
 }

@@ -1,4 +1,4 @@
-using Felipe.Backend.Locsonging.Domain;
+using Felipe.Backend.Locsonging.Helper;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 
@@ -14,9 +14,11 @@ namespace Felipe.Backend.Locsonging.Infrastructure
             _ctx = client.GetDatabase(settings.Value.Database);
         }
 
-        public IMongoCollection<T> GetCollection<T>(string name)
+        public IMongoCollection<T> GetCollection<T>()
         {
-            return _ctx.GetCollection<T>(name);
+            var collection = (MongoCollectionAttribute) Attributes.Get<MongoCollectionAttribute>(typeof(T));
+            
+            return _ctx.GetCollection<T>(collection?.Name);
         }
     }
 }

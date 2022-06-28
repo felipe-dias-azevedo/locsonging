@@ -4,6 +4,6 @@ namespace Felipe.Backend.Locsonging.Infrastructure
 {
     public interface IMongoContext
     {
-        IMongoCollection<T> GetCollection<T>(string name);
+        IMongoCollection<T> GetCollection<T>();
     }
 }

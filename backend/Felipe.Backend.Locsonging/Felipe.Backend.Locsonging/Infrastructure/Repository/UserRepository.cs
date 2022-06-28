@@ -11,7 +11,7 @@ namespace Felipe.Backend.Locsonging.Infrastructure.Repository
 
         public UserRepository(IMongoContext ctx)
         {
-            _users = ctx.GetCollection<User>("");
+            _users = ctx.GetCollection<User>();
         }
 
         public async Task<User> Select(string id)
