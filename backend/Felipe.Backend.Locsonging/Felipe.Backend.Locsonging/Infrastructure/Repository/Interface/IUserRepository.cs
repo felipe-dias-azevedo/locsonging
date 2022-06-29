@@ -6,8 +6,10 @@ namespace Felipe.Backend.Locsonging.Infrastructure.Repository.Interface
     public interface IUserRepository
     {
 
-        public Task<User> GetByUserId(string id);
+        Task<User> GetByUserId(string id);
 
-        public Task<User> GetByEmail(string email);
+        Task<User> GetByEmail(string email);
+
+        Task Insert(User user);
     }
 }

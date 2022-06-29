@@ -26,7 +26,7 @@ namespace Felipe.Backend.Locsonging.Controller
 
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] CreateUserViewModel userViewModel)
-            => Ok(await _onboardingService.Create(userViewModel));
+            => Created(await _onboardingService.Create(userViewModel), userViewModel);
 
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginViewModel loginViewModel) 

@@ -19,6 +19,11 @@ namespace Felipe.Backend.Locsonging.Infrastructure.Repository
             return await _users.Find(u => u.Email == email).FirstOrDefaultAsync();
         }
 
+        public async Task Insert(User user)
+        {
+            await _users.InsertOneAsync(user);
+        }
+
         public async Task<User> GetByUserId(string userId)
         {
             return await _users.Find(x => x.UserId == userId).FirstOrDefaultAsync();

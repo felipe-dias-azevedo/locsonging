@@ -11,9 +11,15 @@ namespace Felipe.Backend.Locsonging.Helper
                 throw new InvalidOperationException();
             }
 
-            // TODO: Validate by bcrypt
+            // TODO: Validate by bcrypt and base64
 
             return password == passwordStored;
+        }
+
+        public static string ToPassword(string password)
+        {
+            // TODO: Set bcrypt and base64
+            return password;
         }
     }
 }
