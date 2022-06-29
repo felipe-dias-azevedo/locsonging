@@ -1,13 +1,15 @@
 ﻿using Felipe.Backend.Locsonging.DTO.Request;
+using Felipe.Backend.Locsonging.DTO.Response;
+using System.Threading.Tasks;
 
 namespace Felipe.Backend.Locsonging.Service.Domain.Interface
 {
     public interface IAuthService
     {
 
-        public bool LoginUser(LoginViewModel loginView);
+        Task<UserTokenViewModel> LoginUser(LoginViewModel loginView);
 
-        public bool LoginSpotify(LoginViewModel loginView);
+        Task<bool> LoginSpotify(LoginViewModel loginView);
 
     }
 }

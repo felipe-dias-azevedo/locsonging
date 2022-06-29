@@ -14,9 +14,14 @@ namespace Felipe.Backend.Locsonging.Infrastructure.Repository
             _users = ctx.GetCollection<User>();
         }
 
-        public async Task<User> Select(string id)
+        public async Task<User> GetByEmail(string email)
         {
-            return await _users.Find(x => x.Id == id).FirstOrDefaultAsync();
+            return await _users.Find(u => u.Email == email).FirstOrDefaultAsync();
+        }
+
+        public async Task<User> GetByUserId(string userId)
+        {
+            return await _users.Find(x => x.UserId == userId).FirstOrDefaultAsync();
         }
     }
 }

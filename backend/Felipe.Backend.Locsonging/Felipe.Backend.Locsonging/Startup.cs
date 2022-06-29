@@ -48,6 +48,8 @@ namespace Felipe.Backend.Locsonging
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            // TODO: Add Exception Handler for custom exceptions
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

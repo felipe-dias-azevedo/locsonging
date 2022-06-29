@@ -6,7 +6,6 @@
 
   <ItemGroup>
     <Folder Include="Adapter" />
-    <Folder Include="DTO\Response\" />
     <Folder Include="Infrastructure\DAL\" />
     <Folder Include="Infrastructure\Repository\" />
     <Folder Include="Service\Application" />
